@@ -6,6 +6,9 @@ module.exports = {
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
     'plugin:lodash/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
   ],
   plugins: ['lodash', 'sonarjs'],
   rules: {
