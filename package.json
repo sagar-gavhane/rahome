@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -10,29 +10,46 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test",
+    "test:ci": "cross-env CI=true tsdx test",
+    "test:watchAll": "tsdx test --watchAll",
+    "test:coverage": "tsdx test --coverage",
+    "coverage:open": "open ./coverage/lcov-report/index.html",
     "lint": "tsdx lint",
+    "prettier": "prettier \"src/**/*.+(js|jsx|ts|tsx|json|css|scss|md|html|yaml)\"",
+    "format": "npm run prettier -- --write",
     "prepare": "tsdx build"
   },
   "peerDependencies": {},
   "husky": {
     "hooks": {
-      "pre-commit": "tsdx lint"
+      "pre-commit": "npm run format && npm run lint && npm run test:ci"
     }
   },
   "prettier": {
     "printWidth": 80,
-    "semi": true,
+    "semi": false,
     "singleQuote": true,
-    "trailingComma": "es5"
+    "trailingComma": "es5",
+    "arrowParens": "always",
+    "tabWidth": 2
   },
   "name": "rahome",
   "author": "sagar",
   "module": "dist/rahome.esm.js",
   "devDependencies": {
     "@types/jest": "^25.1.4",
+    "@types/lodash": "^4.14.149",
+    "cross-env": "^7.0.2",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-lodash": "^6.0.0",
+    "eslint-plugin-sonarjs": "^0.5.0",
     "husky": "^4.2.3",
     "tsdx": "^0.12.3",
     "tslib": "^1.11.1",
     "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15",
+    "lodash-es": "^4.17.15"
   }
 }
