@@ -1,4 +1,4 @@
-import Stack from './index'
+import Stack from './../Stack'
 
 describe('Stack', () => {
   describe('empty()', () => {
