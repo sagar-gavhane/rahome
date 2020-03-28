@@ -13,11 +13,12 @@
     "test:ci": "cross-env CI=true tsdx test",
     "test:watchAll": "tsdx test --watchAll",
     "test:coverage": "tsdx test --coverage",
-    "coverage:open": "open ./coverage/lcov-report/index.html",
-    "lint": "tsdx lint",
+    "test:coverage:open": "open ./coverage/lcov-report/index.html",
+    "lint": "tsdx lint src",
     "prettier": "prettier \"src/**/*.+(js|jsx|ts|tsx|json|css|scss|md|html|yaml)\"",
     "format": "npm run prettier -- --write",
-    "prepare": "tsdx build"
+    "prepare": "tsdx build",
+    "release": "np"
   },
   "peerDependencies": {},
   "husky": {
@@ -38,18 +39,14 @@
   "module": "dist/rahome.esm.js",
   "devDependencies": {
     "@types/jest": "^25.1.4",
-    "@types/lodash": "^4.14.149",
     "cross-env": "^7.0.2",
     "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-lodash": "^6.0.0",
     "eslint-plugin-sonarjs": "^0.5.0",
     "husky": "^4.2.3",
-    "tsdx": "^0.12.3",
+    "np": "^6.2.0",
+    "tsdx": "^0.13.0",
     "tslib": "^1.11.1",
     "typescript": "^3.8.3"
   },
-  "dependencies": {
-    "lodash": "^4.17.15",
-    "lodash-es": "^4.17.15"
-  }
+  "dependencies": {}
 }
