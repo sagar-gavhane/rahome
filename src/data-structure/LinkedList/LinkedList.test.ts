@@ -84,6 +84,10 @@ describe('LinkedList', () => {
       })
     })
     describe('contains(data)', () => {
+      it('should return false if list is empty', () => {
+        const list = new LinkedList()
+        expect(list.contains(20)).toBeFalsy()
+      })
       it('should return true if list contains element', () => {
         const list = new LinkedList()
         list.add(10)
@@ -118,6 +122,96 @@ describe('LinkedList', () => {
         list.add({ val: 20, id: 2 })
         list.add({ val: 30, id: 3 })
         expect(list.contains({ val: 10, id: 3 })).toBeFalsy()
+      })
+    })
+    describe('remove()', () => {
+      it('should remove element of empty list', () => {
+        const list = new LinkedList()
+        const element = list.remove(10)
+        expect(list.toString()).toBe('')
+        expect(element).toBeNull()
+      })
+      it('should remove element of one element list', () => {
+        const list = new LinkedList()
+        list.add(10)
+        expect(list.toString()).toBe('10')
+
+        const element = list.remove(10)
+        expect(list.toString()).toBe('')
+        expect(element?.value).toBe(10)
+        expect(element?.next).toBeNull()
+      })
+      it('should remove element of non empty element list', () => {
+        const list = new LinkedList()
+        list.add(10)
+        list.add(20)
+        list.add(30)
+        list.add(40)
+        list.add(50)
+        expect(list.toString()).toBe('10,20,30,40,50')
+
+        const element = list.remove(30)
+        expect(list.toString()).toBe('10,20,40,50')
+        expect(element?.value).toBe(30)
+        expect(element?.next).not.toBeNull()
+      })
+      it('should remove last element of non empty element list', () => {
+        const list = new LinkedList()
+        list.add(10)
+        list.add(20)
+        list.add(30)
+        expect(list.toString()).toBe('10,20,30')
+
+        const element = list.remove(30)
+        expect(list.toString()).toBe('10,20')
+        expect(element?.value).toBe(30)
+        expect(element?.next).toBeNull()
+      })
+    })
+    describe('removeFirst()', () => {
+      it('should remove first element of empty list', () => {
+        const list = new LinkedList()
+        const element = list.removeFirst()
+        expect(list.toString()).toBe('')
+        expect(element).toBeNull()
+      })
+      it('should remove first element of list', () => {
+        const list = new LinkedList()
+        list.add(10)
+        list.add(20)
+        list.add(30)
+        expect(list.toString()).toBe('10,20,30')
+        const element = list.removeFirst()
+        expect(list.toString()).toBe('20,30')
+        expect(element?.toString()).toBe('10')
+      })
+    })
+    describe('removeLast()', () => {
+      it('should remove last element of empty list', () => {
+        const list = new LinkedList()
+        const element = list.removeLast()
+        expect(list.toString()).toBe('')
+        expect(element).toBeNull()
+      })
+      it('should remove last element of one element list', () => {
+        const list = new LinkedList()
+        list.add(40)
+        const element = list.removeLast()
+        expect(list.toString()).toBe('')
+        expect(element?.value).toBe(40)
+        expect(element?.next).toBeNull()
+      })
+      it('should remove last element of list', () => {
+        const list = new LinkedList()
+        list.add(10)
+        list.add(20)
+        list.add(30)
+
+        expect(list.toString()).toBe('10,20,30')
+        const element = list.removeLast()
+        expect(list.toString()).toBe('10,20')
+        expect(element?.value).toBe(30)
+        expect(element?.next).toBeNull()
       })
     })
   })

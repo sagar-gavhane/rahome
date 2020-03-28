@@ -1,5 +1,3 @@
-import isObject from 'lodash/isObject'
-
 class Node {
   public value: string | number | object | string[] | number[]
   public next: null | Node
@@ -14,7 +12,7 @@ class Node {
 }
 
 Node.prototype.toString = function() {
-  if (isObject(this.value)) {
+  if (typeof this.value === 'object' && this.value !== null) {
     return JSON.stringify(this.value)
   }
   return `${this.value}`
