@@ -2,9 +2,10 @@ import Node from './Node'
 import isEqual from './../../utils/isEqual'
 
 class LinkedList {
-  private head: null | Node = null
-  private tail: null | Node = null
-  private numberOfNodes: number = 0
+  // eslint-disable-next-line prettier/prettier
+  #head: null | Node = null
+  #tail: null | Node = null
+  #numberOfNodes: number = 0
 
   /**
    * Inserts the specified element at the specified position in list.
@@ -18,7 +19,7 @@ class LinkedList {
     element: string | string[] | number | number[] | object,
     position: null | number = null
   ): LinkedList {
-    if (position && position > this.numberOfNodes + 1) {
+    if (position && position > this.#numberOfNodes + 1) {
       throw new Error('invalid position')
     }
 
@@ -33,7 +34,7 @@ class LinkedList {
 
       return this
     } else {
-      let current: null | Node = this.head
+      let current: null | Node = this.#head
       let currentPosition: number = 0
       const node = new Node(element, null)
 
@@ -44,10 +45,10 @@ class LinkedList {
 
       node.next = current || null
       current = node
-      this.numberOfNodes++
+      this.#numberOfNodes++
 
       /* istanbul ignore else */
-      if (this.head !== null) this.head.next = current || null
+      if (this.#head !== null) this.#head.next = current || null
 
       return this
     }
@@ -63,13 +64,13 @@ class LinkedList {
   public addFirst(
     element: string | string[] | number | number[] | object
   ): LinkedList {
-    const node = new Node(element, this.head)
+    const node = new Node(element, this.#head)
 
-    this.head = node
-    this.numberOfNodes++
+    this.#head = node
+    this.#numberOfNodes++
 
-    if (!this.tail) {
-      this.tail = node
+    if (!this.#tail) {
+      this.#tail = node
     }
 
     return this
@@ -88,17 +89,17 @@ class LinkedList {
     const node: Node = new Node(element)
 
     if (this.isEmpty()) {
-      this.head = node
-      this.tail = node
+      this.#head = node
+      this.#tail = node
     }
 
     /* istanbul ignore else */
-    if (this.tail !== null) {
-      this.tail.next = node
-      this.tail = node
+    if (this.#tail !== null) {
+      this.#tail.next = node
+      this.#tail = node
     }
 
-    this.numberOfNodes++
+    this.#numberOfNodes++
 
     return this
   }
@@ -109,9 +110,9 @@ class LinkedList {
    * @memberof LinkedList
    */
   public clear(): void {
-    this.head = null
-    this.tail = null
-    this.numberOfNodes = 0
+    this.#head = null
+    this.#tail = null
+    this.#numberOfNodes = 0
   }
 
   /**
@@ -126,7 +127,7 @@ class LinkedList {
   ): boolean {
     if (this.isEmpty()) return false
 
-    let current: Node | null = this.head
+    let current: Node | null = this.#head
 
     while (current) {
       if (isEqual(current.value, element)) return true
@@ -143,7 +144,7 @@ class LinkedList {
    * @memberof LinkedList
    */
   public isEmpty(): boolean {
-    return this.head === null
+    return this.#head === null
   }
 
   /**
@@ -155,18 +156,18 @@ class LinkedList {
   public remove(
     element: string | string[] | number | number[] | object
   ): Node | null {
-    if (this.head === null) {
+    if (this.#head === null) {
       return null
     }
 
     let deletedNode = null
 
-    if (isEqual(this.head.value, element)) {
-      deletedNode = this.head
-      this.head = this.head.next
+    if (isEqual(this.#head.value, element)) {
+      deletedNode = this.#head
+      this.#head = this.#head.next
     }
 
-    let current = this.head
+    let current = this.#head
 
     while (current && current?.next !== null) {
       if (isEqual(current?.next.value, element)) {
@@ -177,8 +178,8 @@ class LinkedList {
       }
     }
 
-    if (isEqual(this.tail?.value, element)) {
-      this.tail = current
+    if (isEqual(this.#tail?.value, element)) {
+      this.#tail = current
     }
 
     return deletedNode
@@ -190,12 +191,12 @@ class LinkedList {
    * @memberof LinkedList
    */
   public removeFirst(): Node | null {
-    if (this.head === null) {
+    if (this.#head === null) {
       return null
     }
 
-    const current = this.head
-    this.head = this.head.next
+    const current = this.#head
+    this.#head = this.#head.next
     current.next = null
 
     return current
@@ -207,22 +208,22 @@ class LinkedList {
    * @memberof LinkedList
    */
   public removeLast(): Node | null {
-    if (this.head === null) {
+    if (this.#head === null) {
       return null
     }
 
     let deletedNode = null
 
-    if (this.head === this.tail) {
-      deletedNode = this.head
+    if (this.#head === this.#tail) {
+      deletedNode = this.#head
 
-      this.head = null
-      this.tail = null
+      this.#head = null
+      this.#tail = null
 
       return deletedNode
     }
 
-    let current: Node | null = this.head
+    let current: Node | null = this.#head
 
     while (current?.next !== null) {
       if (!current?.next.next) {
@@ -236,13 +237,13 @@ class LinkedList {
       }
     }
 
-    this.tail = current
+    this.#tail = current
 
     return deletedNode
   }
 
   public size(): number {
-    return this.numberOfNodes
+    return this.#numberOfNodes
   }
 
   /**
@@ -253,7 +254,7 @@ class LinkedList {
    */
   public toArray(): Node[] {
     const nodes = []
-    let current = this.head
+    let current = this.#head
 
     while (current) {
       nodes.push(current)
