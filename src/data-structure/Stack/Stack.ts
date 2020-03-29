@@ -1,5 +1,7 @@
 class Stack {
-  private storage: Array<any> = []
+  // private storage: Array<any> = []
+  // eslint-disable-next-line prettier/prettier
+  #storage: Array<any> = []
 
   /**
    * Tests if this stack is empty.
@@ -8,7 +10,7 @@ class Stack {
    * @memberof Stack
    */
   public isEmpty(): boolean {
-    return this.storage.length === 0
+    return this.#storage.length === 0
   }
 
   /**
@@ -23,7 +25,7 @@ class Stack {
       throw new Error(message)
     }
 
-    return this.storage.pop()
+    return this.#storage.pop()
   }
   /**
    * Pushes an element onto the top of this stack.
@@ -32,7 +34,7 @@ class Stack {
    * @memberof Stack
    */
   public push(element: any): void {
-    this.storage.push(element)
+    this.#storage.push(element)
   }
 
   /**
@@ -42,7 +44,7 @@ class Stack {
    * @memberof Stack
    */
   public toArray(): Array<any> {
-    return this.storage
+    return this.#storage
   }
 
   /**
@@ -52,7 +54,7 @@ class Stack {
    * @memberof Stack
    */
   public toString(): string {
-    return this.storage.map((el: any) => JSON.stringify(el)).toString()
+    return this.#storage.map((el: any) => JSON.stringify(el)).toString()
   }
 }
 

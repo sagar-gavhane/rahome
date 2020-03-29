@@ -10,7 +10,14 @@ module.exports = {
     'plugin:import/typescript',
   ],
   plugins: ['sonarjs'],
-  rules: {},
+  rules: {
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
+  },
   settings: {
     react: {
       version: '999.999.999',

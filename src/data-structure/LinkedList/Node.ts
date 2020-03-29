@@ -11,6 +11,7 @@ class Node {
   }
 }
 
+// eslint-disable-next-line prettier/prettier
 Node.prototype.toString = function() {
   if (typeof this.value === 'object' && this.value !== null) {
     return JSON.stringify(this.value)
