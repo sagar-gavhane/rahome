@@ -1,18 +1,26 @@
 language: node_js
 sudo: false
 cache:
+  npm: true
   directories:
     - node_modules
+    - '$HOME/.sonar/cache'
 node_js:
+  - 12
   - 10
   - 8
 os: osx
 git:
   depth: 3
-jobs:
-  include: 'unit test'
 install:
   - npm install
 script:
   - npm run lint
   - npm run test:ci
+  - npm run test:coverage:ci
+  - sonar-scanner
+addons:
+  sonarcloud:
+    organization: 'sagar-gavhane'
+    token:
+      secure: 'XkiKDOT9E1DtQDwxs5++MkSrf7oVCBwBWSxVzyjBsvyFwuJBFFeCL/QzsJgkuFIEVHx73VbtSPOlzaEdp42jUVUXMJ/IBEwD8jibRVfiN1Ho8H+c/7Ec4vVkrKq2tIyiBTIhRcBYciHb+CIQZUZ/iJ4Ef9WXdy07199l4jO9dcRQkXWNZIY8d4cMQwHNTES9VtRbJZNqCKVTtSCyYAV9er6fAa5mD1Hwa0iqbV4Wwlnf0bf4CIHWWUjiiX9ipiW+mBEkbrzYlYn0viy9HG+aEdLJ8qIemq92XmzGqvDLizbNZ2fQMX7NFsIWUXINVQOGfd6dLthjmF9ve8JNVP1Xv5GwSQPCZFYT3MKkDDnJU5QpqLfzSYRo5VWL4HRdlQHlDTUuJSbRTHERsAuXGWI0tVcvt9STXuMtxZgfthdS9bgYmFa5D7c0UhVg/KnjknBTQ0aYS3qQ62iGwDKtz3tqXfycqffOTvXX/GmTnAXw3hyIQsu4kuyV4k39IYrlLKDaRpKwoAkIXu8TW1Iw8K1qDVoKEF7hOQp01C8vcpAkeDlfJg+xA97/b3wXVDaYYZFaOWrsVRbQVyWgdNbySB2zkCdCb1haeTs05BFqfn6xRZrfzxRiFHT68js3rPcxQTklwRnLouVICKYh/kY5XuXp02oMCizgiqs06niihBjoMyU='

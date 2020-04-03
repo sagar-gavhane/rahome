@@ -13,6 +13,7 @@
     "test:ci": "cross-env CI=true tsdx test",
     "test:watchAll": "tsdx test --watchAll",
     "test:coverage": "tsdx test --coverage",
+    "test:coverage:ci": "cross-env CI=true tsdx test --coverage",
     "test:coverage:open": "open ./coverage/lcov-report/index.html",
     "lint": "tsdx lint src",
     "prettier": "prettier \"src/**/*.+(js|jsx|ts|tsx|json|css|scss|md|html|yaml)\"",
