@@ -1,0 +1,18 @@
+language: node_js
+sudo: false
+cache:
+  directories:
+    - node_modules
+node_js:
+  - 10
+  - 8
+os: osx
+git:
+  depth: 3
+jobs:
+  include: 'unit test'
+install:
+  - npm install
+script:
+  - npm run lint
+  - npm run test:ci
