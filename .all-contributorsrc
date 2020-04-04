@@ -1,0 +1,24 @@
+{
+  "projectName": "rahome",
+  "projectOwner": "sagar-gavhane",
+  "repoType": "github",
+  "files": ["README.md"],
+  "imageSize": 100,
+  "commit": false,
+  "skipCi": "true",
+  "contributors": [
+    {
+      "login": "sagar-gavhane",
+      "name": "Sagar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/33308798?v=3",
+      "profile": "https://dev.to/sagar",
+      "contributions": [
+        "code",
+        "doc",
+        "infra",
+        "test",
+        "bug"
+      ]
+    }
+  ]
+}
