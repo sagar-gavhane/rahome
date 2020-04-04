@@ -36,7 +36,22 @@
     "tabWidth": 2
   },
   "name": "rahome",
-  "author": "sagar",
+  "description": "Popular data structures for writing efficient programs in JavaScript",
+  "author": "Sagar <sgavhane70@gmail.com> (https://dev.to/sagar)",
+  "homepage": "https://github.com/sagar-gavhane/rahome",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sagar-gavhane/rahome"
+  },
+  "bugs": {
+    "url": "https://github.com/sagar-gavhane/rahome/issues"
+  },
+  "keywords": [
+    "data structure",
+    "linked list",
+    "stack",
+    "queue"
+  ],
   "module": "dist/rahome.esm.js",
   "devDependencies": {
     "@types/jest": "^25.1.4",
