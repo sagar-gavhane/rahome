@@ -20,7 +20,7 @@
     "format": "npm run prettier -- --write",
     "prepare": "tsdx build",
     "release": "np",
-    "size": "npm run build && size-limit",
+    "size-build": "npm run build && size-limit",
     "size-install": "npm install"
   },
   "peerDependencies": {},
