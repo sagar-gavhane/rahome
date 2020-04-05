@@ -1,4 +1,4 @@
-import { LinkedList } from './../../index'
+import { LinkedList } from '../index'
 
 describe('LinkedList', () => {
   describe('core', () => {

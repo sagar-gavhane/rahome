@@ -1,6 +1,6 @@
-import LinkedList from './data-structure/LinkedList'
-import Stack from './data-structure/Stack'
-import Queue from './data-structure/Queue'
-import HashTable from './data-structure/HashTable'
+import LinkedList from './LinkedList'
+import Stack from './Stack'
+import Queue from './Queue'
+import HashTable from './HashTable'
 
 export { LinkedList, Stack, Queue, HashTable }
