@@ -1,5 +1,5 @@
-import LinkedList from './data-structure/LinkedList'
-import Stack from './data-structure/Stack'
-import Queue from './data-structure/Queue'
+import LinkedList from './LinkedList'
+import Stack from './Stack'
+import Queue from './Queue'
 
 export { LinkedList, Stack, Queue }

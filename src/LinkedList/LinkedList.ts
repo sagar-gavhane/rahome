@@ -1,5 +1,5 @@
 import Node from './Node'
-import isEqual from './../../utils/isEqual'
+import isEqual from '../utils/isEqual'
 
 class LinkedList {
   // eslint-disable-next-line prettier/prettier
