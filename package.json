@@ -19,9 +19,7 @@
     "prettier": "prettier \"**/*.+(js|jsx|ts|tsx|json|css|scss|md|html|yml|yaml)\"",
     "format": "npm run prettier -- --write",
     "prepare": "tsdx build",
-    "release": "np",
-    "size-build": "npm run build && size-limit",
-    "size-install": "npm install"
+    "release": "np"
   },
   "peerDependencies": {},
   "husky": {
@@ -55,22 +53,7 @@
     "queue"
   ],
   "module": "dist/rahome.esm.js",
-  "size-limit": [
-    {
-      "path": "./dist/rahome.cjs.production.min.js",
-      "limit": "10 kB"
-    },
-    {
-      "path": "./dist/rahome.esm.js",
-      "limit": "10 kB"
-    },
-    {
-      "path": "./dist/rahome.umd.production.min.js",
-      "limit": "10 kB"
-    }
-  ],
   "devDependencies": {
-    "@size-limit/preset-app": "^4.4.5",
     "@types/jest": "^25.1.4",
     "cross-env": "^7.0.2",
     "eslint-plugin-import": "^2.20.1",
@@ -78,7 +61,6 @@
     "husky": "^4.2.3",
     "np": "^6.2.0",
     "prettier": "^2.0.2",
-    "size-limit": "^4.4.5",
     "tsdx": "^0.13.0",
     "tslib": "^1.11.1",
     "typescript": "^3.8.3"
