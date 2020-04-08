@@ -16,11 +16,3 @@ class HashTable {
   toArray(): Array<Element>
 }
 ```
-
-<!--
-1. https://github.com/doug-martin/ht
-2. https://github.com/pastyman/alib-hashtable/blob/master/index.js
-3. https://github.com/klippersubs/hashtable/blob/master/source/index.js
-4. https://github.com/trekhleb/javascript-algorithms/blob/master/src/data-structures/hash-table/HashTable.js
-5. https://www.freecodecamp.org/news/how-to-implement-a-simple-hash-table-in-javascript-cb3b9c1f2997/
--->
