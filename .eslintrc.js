@@ -23,4 +23,12 @@ module.exports = {
       version: '999.999.999',
     },
   },
+  overrides: [
+    {
+      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      rules: {
+        'sonarjs/no-element-overwrite': 'off',
+      },
+    },
+  ],
 }
