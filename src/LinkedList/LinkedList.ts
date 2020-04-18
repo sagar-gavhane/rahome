@@ -160,7 +160,7 @@ class LinkedList {
       return null
     }
 
-    let deletedNode = null
+    let deletedNode: Node | null = null
 
     if (isEqual(this.#head.value, element)) {
       deletedNode = this.#head
@@ -212,7 +212,7 @@ class LinkedList {
       return null
     }
 
-    let deletedNode = null
+    let deletedNode: Node | null = null
 
     if (this.#head === this.#tail) {
       deletedNode = this.#head
@@ -253,7 +253,7 @@ class LinkedList {
    * @memberof LinkedList
    */
   public toArray(): Node[] {
-    const nodes = []
+    const nodes: Array<Node> = []
     let current = this.#head
 
     while (current) {
