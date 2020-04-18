@@ -9,7 +9,8 @@ Popular data structures for writing efficient programs in JavaScript.
 ![npm license](https://img.shields.io/npm/l/rahome?style=flat-square)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/rahome?style=flat-square)
 
-![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sagar-gavhane/rahome/CI?style=flat-square)
+![tests](https://github.com/sagar-gavhane/rahome/workflows/tests/badge.svg)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/sagar-gavhane/rahome/tests?style=flat-square)
 [![GitHub issues](https://img.shields.io/github/issues/sagar-gavhane/rahome?style=flat-square)](https://github.com/sagar-gavhane/rahome/issues)
 ![GitHub contributors](https://img.shields.io/github/contributors-anon/sagar-gavhane/rahome?style=flat-square)
 ![GitHub top language](https://img.shields.io/github/languages/top/sagar-gavhane/rahome?style=flat-square)
