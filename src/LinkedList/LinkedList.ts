@@ -38,17 +38,21 @@ class LinkedList {
       let currentPosition: number = 0
       const node = new Node(element, null)
 
-      while (position !== null && currentPosition < position - 1) {
+      while (
+        current?.next !== null &&
+        position !== null &&
+        currentPosition < position - 1
+      ) {
         current = current?.next || null
         currentPosition++
       }
 
-      node.next = current || null
-      current = node
+      if (current) {
+        const temp = current.next
+        current.next = node
+        current.next.next = temp
+      }
       this.#numberOfNodes++
-
-      /* istanbul ignore else */
-      if (this.#head !== null) this.#head.next = current || null
 
       return this
     }

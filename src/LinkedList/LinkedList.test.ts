@@ -29,7 +29,7 @@ describe('LinkedList', () => {
         list.add(20)
         list.add(30)
         list.add(15, 2)
-        expect(list.toString()).toBe('10,15,20,30')
+        expect(list.toString()).toBe('10,20,15,30')
       })
       it('should throw error of invalid position', () => {
         expect(() => {
@@ -38,6 +38,14 @@ describe('LinkedList', () => {
           list.add(20)
           list.add(30, 9)
         }).toThrow('invalid position')
+      })
+      it('should insert element at 4th position in non empty list', () => {
+        const list = new LinkedList()
+        list.add(10)
+        list.add(20)
+        list.add(30)
+        list.add(40, 4)
+        expect(list.toString()).toBe('10,20,30,40')
       })
     })
     describe('addFirst(element)', () => {
