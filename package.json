@@ -50,7 +50,8 @@
     "data structure",
     "linked list",
     "stack",
-    "queue"
+    "queue",
+    "hash table"
   ],
   "module": "dist/rahome.esm.js",
   "devDependencies": {
@@ -65,5 +66,7 @@
     "tslib": "^1.11.1",
     "typescript": "^3.8.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "fast-deep-equal": "~3.1.1"
+  }
 }
