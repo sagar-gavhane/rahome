@@ -38,6 +38,13 @@ list.addFirst(5) // add 10 to list => [5] -> [10] -> [20] -> [30]
 list.addLast(40) // add 40 to list => [5] -> [10] -> [20] -> [30] -> [40]
 ```
 
+## API Reference
+
+- [LinkedList](src/LinkedList/LinkedList.md)
+- [Stack](src/Stack/Stack.md)
+- [Queue](src/Queue/Queue.md)
+- [HashTable](src/HashTable/HashTable.md)
+
 ## Contributing
 
 Pull requests are welcome. Please read [CONTRIBUTING.md](https://github.com/sagar-gavhane/rahome/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
