@@ -23,10 +23,6 @@ list.addLast(40) // add 40 to list => [5] -> [10] -> [20] -> [30] -> [40]
 
 `LinkedList(): void`
 
-**Return Type**
-
-`void`
-
 **Description:**
 
 It will constructs an empty linked list.
@@ -42,10 +38,6 @@ It will constructs an empty linked list.
 **Signature:**
 
 `add(element: string | string[] | number | number[] | object, position: null | number = null): LinkedList`
-
-**Return Type:**
-
-`LinkedList`
 
 **Description:**
 
@@ -70,10 +62,6 @@ position argument should be positive integer number. if we pass negative or inva
 
 `addFirst(element: string | string[] | number | number[] | object): LinkedList`
 
-**Return Type:**
-
-`LinkedList`
-
 **Description:**
 
 Method to inserts the specified element at the beginning of list.
@@ -92,10 +80,6 @@ list.addFirst(10) // it will add 10 to begining of list
 **Signature:**
 
 `addLast(element: string | string[] | number | number[] | object): LinkedList`
-
-**Return Type:**
-
-`LinkedList`
 
 **Description:**
 
@@ -116,10 +100,6 @@ list.addLast(10) // it will add 10 to end of list
 
 `clear():void`
 
-**Return Type:**
-
-`void`
-
 **Description:**
 
 Method to removes all of the elements from list.
@@ -138,10 +118,6 @@ list.clear() // this line will remove all elements from list
 **Signature:**
 
 `contains(element: string | number | object | string[] | number[]): boolean`
-
-**Return Type:**
-
-`boolean`
 
 **Description:**
 
@@ -164,10 +140,6 @@ list.contains(40) // this line will return false
 
 `isEmpty(): boolean`
 
-**Return Type:**
-
-`boolean`
-
 **Description:**
 
 Method to check list is empty or not. It will return `true` if list is empty else return `false`.
@@ -187,12 +159,66 @@ list.isEmpty() // returns false
 
 `remove(element: string | string[] | number | number[] | object): Node | null`
 
-**Return Type:**
-
-`Node | null`
-
 **Description:**
 
 Method to retrieves and removes element from the list. If element is not found then it will `null` value
 
 ---
+
+### `removeFirst()`
+
+**Signature:**
+
+`removeFirst(): Node | null`
+
+**Description:**
+
+Method to remove and returns the last element from this list.
+
+---
+
+### `removeLast()`
+
+**Signature:**
+
+`removeLast(): Node | null`
+
+**Description:**
+
+Method to remove and returns the last element from this list.
+
+---
+
+### `size()`
+
+**Signature:**
+
+`size(): number`
+
+**Description:**
+
+Method to returns the number of elements in the list.
+
+---
+
+### `toArray()`
+
+**Signature:**
+
+`toArray(): Node[]`
+
+**Description:**
+
+Method to returns an array containing all of the elements in list.
+
+---
+
+### `toString()`
+
+**Signature:**
+
+`toString(): Node[]`
+
+**Description:**
+
+Method to returns string representation of list
