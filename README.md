@@ -1,6 +1,11 @@
-# rahome
+<div align="center">
+  <h1>rahome</h1>
 
-Popular data structures for writing efficient programs in JavaScript.
+<img height="80" width="80" alt="unicorn" src='https://emojicdn.elk.sh/🦄' />
+
+<p>Popular data structures for writing efficient programs in JavaScript.</p>
+
+</div>
 
 ## Badges
 
