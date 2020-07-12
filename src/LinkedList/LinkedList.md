@@ -278,7 +278,7 @@ console.log(list.toArray()) // [node, node, node, node]
 
 **Signature:** `toString(): Node[]`
 
-**Description:** Method to returns string representation of linked linked list.
+**Description:** Method to returns string representation of linked list.
 
 **Example:**
 
