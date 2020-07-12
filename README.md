@@ -55,7 +55,7 @@ console.log(list.isEmpty()) // true
 
 ### Contributing
 
-Pull requests are welcome ??.
+Pull requests are welcome.
 
 ### License
 
