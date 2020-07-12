@@ -1,6 +1,6 @@
 # Linked List
 
-A linked list is a linear data structure like Array, in which the elements are not stored at contiguous memory locations and elements linked with pointers. Each node of a list is made up of two items - the `value` and a reference to the `next` node. The last node has a reference to `null` as shown in the below image:
+A linked list is a linear data structure like Array, in which the elements are not stored at contiguous memory locations and elements linked with pointers. Each node of a linked list is made up of two items - the `value` and a reference to the `next` node. The last node has a reference to `null` as shown in the below image:
 
 ![linked list drawing](./assets/linked-list-drawing.png)
 
@@ -23,9 +23,7 @@ console.log(list.size()) // 5
 console.log(list.toString()) // 5,10,20,40
 ```
 
-<!-- todo: codesandbox button add -->
-
-Source: [LinkedList.ts](./LinkedList.ts) Codesandbox: [codesandbox](https://codesandbox.io/)
+[![Edit rahome-linked-list](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/wizardly-http-c0dt6?fontsize=14&hidenavigation=1&theme=dark)
 
 ## Methods
 
@@ -43,11 +41,13 @@ Source: [LinkedList.ts](./LinkedList.ts) Codesandbox: [codesandbox](https://code
 
 **Signature:** `add(element: string | string[] | number | number[] | object, position: null | number = null): LinkedList`
 
-**Description:** Method to inserts the specified element at the specified position in list.
+**Description:** Method to inserts the specified element at the specified position in linked list.
 
 **Example:**
 
 ```js
+import { LinkedList } from 'rahome'
+
 const list = new LinkedList()
 
 list.add(30) // add 30 to list
@@ -63,11 +63,13 @@ list.add(10, 1) // add 10 to first position
 
 **Signature:** `addFirst(element: string | string[] | number | number[] | object): LinkedList`
 
-**Description:** Method to inserts the specified element at the beginning of list.
+**Description:** Method to inserts the specified element at the beginning of linked list.
 
 **Example:**
 
 ```js
+import { LinkedList } from 'rahome'
+
 const list = new LinkedList()
 
 list.add(20) // adds to 20 to list
@@ -81,11 +83,13 @@ list.addFirst(10) // it will add 10 to begining of list
 
 **Signature:** `addLast(element: string | string[] | number | number[] | object): LinkedList`
 
-**Description:** Method to appends the specified element to the end of list.
+**Description:** Method to appends the specified element to the end of linked list.
 
 **Example:**
 
 ```js
+import { LinkedList } from 'rahome'
+
 const list = new LinkedList()
 
 list.add(20) // adds to 20 to list
@@ -99,11 +103,13 @@ list.addLast(10) // it will add 10 to end of list
 
 **Signature:** `clear():void`
 
-**Description:** Method to removes all of the elements from list.
+**Description:** Method to removes all of the elements from linked list.
 
 **Example:**
 
 ```js
+import { LinkedList } from 'rahome'
+
 const list = new LinkedList()
 
 list.add(20) // adds to 20 to list
@@ -123,6 +129,8 @@ list.clear() // this line will remove all elements from list
 **Example:**
 
 ```js
+import { LinkedList } from 'rahome'
+
 const list = new LinkedList()
 list.add(10) // adds to 10 to list
 list.add(20) // adds to 20 to list
@@ -142,6 +150,8 @@ list.contains(40) // this line will return false
 **Example:**
 
 ```js
+import { LinkedList } from 'rahome'
+
 const list = new LinkedList()
 list.isEmpty() // returns true
 list.add(10) // adds 10 to list
@@ -159,6 +169,8 @@ list.isEmpty() // returns false
 **Example:**
 
 ```js
+import { LinkedList } from 'rahome'
+
 const list = new LinkedList()
 list.add(10)
 list.add(20)
@@ -173,11 +185,13 @@ list.remove(10) // this will remove 10 from list.
 
 **Signature:** `removeFirst(): Node | null`
 
-**Description:** Method to remove and returns the first element from this list.
+**Description:** Method to remove and returns the first element from this linked list.
 
 **Example:**
 
 ```js
+import { LinkedList } from 'rahome'
+
 const list = new LinkedList()
 
 list.add(10)
@@ -193,11 +207,13 @@ list.removeFirst() // this will remove first element from list i.e. 10.
 
 **Signature:** `removeLast(): Node | null`
 
-**Description:** Method to remove and returns the last element from this list.
+**Description:** Method to remove and returns the last element from this linked list.
 
 **Example:**
 
 ```js
+import { LinkedList } from 'rahome'
+
 const list = new LinkedList()
 
 list.add(10)
@@ -216,11 +232,13 @@ console.log(list.toString()) // 10,20
 
 **Signature:** `size(): number`
 
-**Description:** Method to returns the number of elements in the list.
+**Description:** Method to returns the number of elements in the linked list.
 
 **Example:**
 
 ```js
+import { LinkedList } from 'rahome'
+
 const list = new LinkedList()
 
 list.add(10)
@@ -237,11 +255,13 @@ console.log(list.size()) // 4
 
 **Signature:** `toArray(): Node[]`
 
-**Description:** Method to returns an array containing all of the elements in list.
+**Description:** Method to returns an array containing all of the elements in linked list.
 
 **Example:**
 
 ```js
+import { LinkedList } from 'rahome'
+
 const list = new LinkedList()
 
 list.add(10)
@@ -258,11 +278,13 @@ console.log(list.toArray()) // [node, node, node, node]
 
 **Signature:** `toString(): Node[]`
 
-**Description:** Method to returns string representation of list.
+**Description:** Method to returns string representation of linked linked list.
 
 **Example:**
 
 ```js
+import { LinkedList } from 'rahome'
+
 const list = new LinkedList()
 
 list.add(10)
