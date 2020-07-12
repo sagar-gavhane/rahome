@@ -23,6 +23,8 @@ console.log(list.size()) // 5
 console.log(list.toString()) // 5,10,20,40
 ```
 
+<!-- todo: codesandbox button add -->
+
 Source: [LinkedList.ts](./LinkedList.ts) Codesandbox: [codesandbox](https://codesandbox.io/)
 
 ## Methods
